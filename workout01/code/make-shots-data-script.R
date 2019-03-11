@@ -7,12 +7,12 @@
 ## shots data.
 ##
 ## Inputs required:
-## Shot statistics files in the workout01/code/ directory:
-## - andre-iguodala.csv
-## - draymond-green.csv
-## - kevin-durant.csv
-## - klay-thompson.csv
-## - stephen-curry.csv
+## Shot statistics files:
+## - data/andre-iguodala.csv
+## - data/draymond-green.csv
+## - data/kevin-durant.csv
+## - data/klay-thompson.csv
+## - data/stephen-curry.csv
 ##
 ## Outputs created:
 ## - data/shots-data.csv
@@ -65,20 +65,34 @@ durant$minute = durant$period * 12 - durant$minutes_remaining
 thompson$minute = thompson$period * 12 - thompson$minutes_remaining
 curry$minute = curry$period * 12 - curry$minutes_remaining
 
-#sink(file = '../output/andre-iguodala-summary.txt')
-#summary(iguodala)
-#sink()
+sink(file = '../output/andre-iguodala-summary.txt')
+summary(iguodala)
+sink()
 
-# add rest of summary text files
+sink(file = '../output/draymond-green-summary.txt')
+summary(green)
+sink()
+
+sink(file = '../output/kevin-durant-summary.txt')
+summary(durant)
+sink()
+
+sink(file = '../output/klay-thompson-summary.txt')
+summary(thompson)
+sink()
+
+sink(file = '../output/stephen-curry-summary.txt')
+summary(curry)
+sink()
 
 # stack all tables into a single data frame
 shots_data <- rbind(iguodala, green, durant, thompson, curry)
 
-#write.csv(
-#  x = shots_data,
-#  file = '../data/shots-data.csv'
-#)
+write.csv(
+  x = shots_data,
+  file = '../data/shots-data.csv'
+)
 
-#sink(file = '../output/shots-data-summary.txt')
-#summary(shots_data)
-#sink()
+sink(file = '../output/shots-data-summary.txt')
+summary(shots_data)
+sink()
