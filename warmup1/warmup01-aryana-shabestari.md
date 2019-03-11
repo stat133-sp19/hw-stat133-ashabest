@@ -1,0 +1,102 @@
+Warmup 01
+================
+Aryana Shabestari
+
+Markdown practice
+=================
+
+Star Wars
+---------
+
+### Sha'a Gi
+
+> *"This is the end. We're all doomed."* -- Sha'a Gi, during the Battle of Hypori
+
+![](https://vignette.wikia.nocookie.net/starwars/images/1/18/Sha%27a_Gi_Headshot.jpg/revision/latest?cb=20100121194637%20=60x)
+
+| Description | Value                  |
+|-------------|------------------------|
+| Homeworld   | Ord Biniir             |
+| Died        | 22 BBY (13:9), Hypori  |
+| Species     | *Homo sapiens*         |
+| Gender      | Male                   |
+| Height      | 1.85 meters            |
+| Hair color  | Brown                  |
+| Eye color   | Black                  |
+| Skin color  | Light                  |
+| Era(s)      | Rise of the Empire era |
+
+[Read more](https://starwars.fandom.com/wiki/Sha%27a_Gi)
+
+------------------------------------------------------------------------
+
+Cooking Recipe
+--------------
+
+### Three Bean Chili
+
+![](https://smittenkitchendotcom.files.wordpress.com/2014/04/three-bean-chili.jpg?w=600)
+
+Great for those times when the weather keeps switching between warm spring and blistering winter and just can't decide what to do. This dish promises to "bridge the gap!"
+
+You can vary it however you like depending on your own tastes:
+
+> "You can make it with dried beans or canned. You can make it with dried chiles or fresh or just mild peppers. You can make it with a lot of or a little tomato. You can skip the chili powder if it’s not your thing ..."
+
+[Read the whole story](https://smittenkitchen.com/2014/04/three-bean-chili/)
+
+------------------------------------------------------------------------
+
+Ingredients
+
+-   1 tablespoon olive oil
+-   1 medium onion, chopped small
+-   1 to 2 peppers of your choice, finely chopped
+-   3 cloves garlic, minced
+-   2 tablespoons chili powder
+-   2 teaspoons ground cumin
+-   1 teaspoon dried oregano
+-   1 1/2 teaspoons table salt or 2 1/2 teaspoons kosher or coarse salt
+-   1 12-ounce bottle beer
+-   1 28-ounce can crushed tomatoes, fire-roasted if you can find them
+-   1 1/2 cups mixed dried beans
+-   3 1/2 to 4 cups water
+-   To serve: Lime wedges, sour cream, diced white onion, cilantro, corn or flour tortillas or tortilla chips or rice
+
+Instructions (stove version):
+
+1.  Heat oil in the bottom of a medium-sized heavy pot or Dutch oven.
+2.  Once warm, add onion and cook for 5 minutes, until translucent.
+3.  Add any fresh peppers and cook for 3 more minutes.
+4.  Add garlic, chili powder, cumin, oregano and salt and cook for 2 minutes, until browned and deeply fragrant.
+5.  Add beer and scrape up any bits stuck to the pot. Boil until reduced by half, or, if you’re nervous about alcohol content, until it has all but disappeared.
+6.  Add tomatoes, dried beans, any dried or rehydrated-and-pureed chiles and the smaller amount of water. Bring mixture to a full boil and boil for one minute, then reduce heat to a very low, gentle simmer, place a lid on your pot, and cook for 2 1/2 to 3 hours, until the beans are tender, stirring occasionally.
+7.  Add the last 1/2 cup water if mixture seems to be getting dry. If a slightly more sloshy chili wouldn’t bother you, you can add it from the get-go.
+8.  Serve as-is or with fixings of your choice.
+
+------------------------------------------------------------------------
+
+Euclidean Distance
+------------------
+
+### Definition
+
+The **Euclidean distance** between points **p** and **q** is the length of the line segment connecting them ($\\overline{\\mathbf{pq}}$).
+
+In Cartesian coordinates, if **p** = (*p*<sub>1</sub>, *p*<sub>2</sub>, …, *p*<sub>*n*</sub>) and **q** = (*q*<sub>1</sub>, *q*<sub>2</sub>, …, *q*<sub>*n*</sub>) are two points in Euclidean *n*-space, then the distance (d) from **p** to **q**, or from **q** to **p** is given by the Pythagorean formula:
+
+$$
+\\begin{align}
+  d(\\mathbf{p}, \\mathbf{q}) = d(\\mathbf{q}, \\mathbf{p})
+  &= \\sqrt{(q\_1 - p\_1)^2 + (q\_2 - p\_2)^2 + \\cdots + (q\_n - p\_n)^2} \\\\
+  &= \\sqrt{\\sum\_{i=1}^n (q\_i - p\_i)^2}
+\\end{align}
+$$
+
+The position of a point in a Euclidean *n*-space is a Euclidean vector. So, **p** and **q** may be represented as Euclidean vectors, starting from the origin of the space (initial point) with their tips (terminal points) ending at the two points. The **Euclidean norm**, or **Euclidean length**, or **magnitude** of a vector measures the length of the vector:
+
+$\\lVert \\mathbf{p} \\rVert = \\sqrt{p\_1^2 + p\_2^2 + \\cdots + p\_n^2} = \\sqrt{\\mathbf{p} \\cdot \\mathbf{p}}$
+
+where the last expression involves the dot product.
+
+[Learn more](https://en.wikipedia.org/wiki/Euclidean_distance)
