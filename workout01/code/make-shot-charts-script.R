@@ -6,25 +6,27 @@
 ## Also creates a consolidated faceted graph for all 5 players.
 ##
 ## Inputs required:
-## Shot statistics files:
 ## - data/andre-iguodala.csv
 ## - data/draymond-green.csv
 ## - data/kevin-durant.csv
 ## - data/klay-thompson.csv
 ## - data/stephen-curry.csv
+## - images/nba-court.jpg
 ##
 ## Outputs created:
-## images/andre-iguodala-shot-chart.pdf
-## images/draymond-green-shot-chart.pdf
-## images/kevin-durant-shot-chart.pdf
-## images/klay-thompson-shot-chart.pdf
-## images/stephen-curry-shot-chart.pdf
-## images/gsw-shot-charts.pdf
+## - images/andre-iguodala-shot-chart.pdf
+## - images/draymond-green-shot-chart.pdf
+## - images/kevin-durant-shot-chart.pdf
+## - images/klay-thompson-shot-chart.pdf
+## - images/stephen-curry-shot-chart.pdf
+## - images/gsw-shot-charts.pdf
 ##
 ## ------------------------------------------------------------------
 
-## script code adapted from workout01 spec example
+## court image background and plotting code adapted from 
+## workout01 spec example
 
+library(ggplot2)
 library(jpeg)
 library(grid)
 
@@ -74,7 +76,28 @@ shot_chart_curry <- ggplot(data = curry) +
   ggtitle('Shots: Stephen Curry (2016 season)') +
   theme_minimal()
 
-#pdf(filename = "../images/gsw-shot-charts.pdf", 
-#    width = 6.5, height = 5)
-#shot_chart_thompson
-#dev.off()
+# export charts to pdf files
+pdf(file = "../images/andre-iguodala-shot-chart.pdf", 
+    width = 6.5, height = 5)
+shot_chart_iguodala
+dev.off()
+
+pdf(file = "../images/draymond-green-shot-chart.pdf", 
+    width = 6.5, height = 5)
+shot_chart_green
+dev.off()
+
+pdf(file = "../images/kevin-durant-shot-chart.pdf", 
+    width = 6.5, height = 5)
+shot_chart_durant
+dev.off()
+
+pdf(file = "../images/klay-thompson-shot-chart.pdf", 
+    width = 6.5, height = 5)
+shot_chart_thompson
+dev.off()
+
+pdf(file = "../images/stephen-curry-shot-chart.pdf", 
+    width = 6.5, height = 5)
+shot_chart_curry
+dev.off()
