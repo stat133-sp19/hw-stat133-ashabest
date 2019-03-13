@@ -8,7 +8,13 @@ output: github_document
 library(dplyr)
 ```
 
-## Chart of Shot Attempts by Player
+## Introduction
+
+Over the past several years, the Golden State Warriors have maintained a solid streak of record-breaking success, and are currently enjoying their status as NBA Champions. When it comes to each game, how do they accumulate the points? Would we see a significant number of 3-point goals, or would we at least see a high success rate when it comes to attempting the shots?
+
+To examine these questions, we decided to take a look at the shooting statistics for several players during the 2016 NBA season, specifically those for Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry. We began by examining their shot attempts with respect to location on the court versus whether the shot was made or missed. We then looked at their success rates (in other words, effective shooting percentages) for 2-point and 3-point field goals, and finally examined the overall shooting percentages.
+
+## Shot Attempts by Player
 
 ```{r out.width='80%', echo=FALSE, fig.align='center'}
 knitr::include_graphics("../images/gsw-shot-charts.png")
@@ -79,4 +85,6 @@ as.data.frame(shots_percentage_3pt)
 ```{r, echo=FALSE, comment = ""}
 as.data.frame(shots_percentage)
 ```
+
+## Conclusions and Takeaways
 
