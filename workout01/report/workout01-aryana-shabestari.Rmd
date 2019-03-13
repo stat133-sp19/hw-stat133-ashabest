@@ -20,6 +20,8 @@ To examine these questions, we decided to take a look at the shooting statistics
 knitr::include_graphics("../images/gsw-shot-charts.png")
 ```
 
+Here we generally see more shot attempts within the 2-point range than past the 3-point line, though Curry is the only one with more attempts past the 3-point line. Other than this, however, there is no clear relationship between location on the court and success of the shot attempted that we can tell from these charts alone, partly due to overplotting of our copious data points.
+
 ## Effective Shooting Percentages by Player
 
 ```{r, echo=FALSE}
@@ -71,20 +73,38 @@ shots_percentage <-
   )
 ```
 
+Calculating the shooting percentages for 2-point and 3-point field goals, as well as overall percentage, provides a bit more insight.
+
 ### 2PT Effective Shooting %
+
 ```{r, echo=FALSE, comment = ""}
 as.data.frame(shots_percentage_2pt)
 ```
 
+For all players, the success rate here is at the least around 50%. Iguodala has the fewest total shots for the season, but makes the most of them within the 2-point range as we can see from his having the highest percentage. Unsurprisingly, we see him followed by our MVPs Curry and Durant.
+
+3-point goals are harder to make, so naturally we see a drop in effective percentages:
+
 ### 3PT Effective Shooting %
+
 ```{r, echo=FALSE, comment = ""}
 as.data.frame(shots_percentage_3pt)
 ```
 
-### Overall
+The ranking order for the first four players from the previous table has essentially been reversed. We also see Curry higher up in terms of success rate with 3-pointers.
+
+However, the overall percentages show a different story:
+
+### Overall Effective Shooting %
+
 ```{r, echo=FALSE, comment = ""}
 as.data.frame(shots_percentage)
 ```
 
+While we saw Curry and Durant within the top three for both 2-point and 3-point percentages, the former now falls near the end, and perhaps this phenomenon is best described by the old saying, "no risk, no reward."
+
 ## Conclusions and Takeaways
 
+From these we see that even in the professional role, it is invariably difficult to make the shots overall, as the success rate is generally around 50%. However, if other teams usually experience lower effective percentages, this would be considered a high success rate.
+
+It also turns out that we get a fairly even distribution of shots both past the 3-point line and within the 2-point range. However, it is naturally easier to have a successful shot when attempted closer to the basket.
