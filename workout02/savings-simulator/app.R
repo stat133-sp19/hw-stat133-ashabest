@@ -12,25 +12,25 @@ ui <- fluidPage(
      column(4,
             sliderInput("init",
                         "Initial Amount",
-                        min = 1, max = 30, value = 20, step = 1),
+                        min = 0, max = 100000, value = 1000, step = 500),
             
             sliderInput("contrib",
                         "Annual Contribution",
-                        min = 1, max = 30, value = 20, step = 1)
+                        min = 0, max = 50000, value = 2000, step = 500)
      ),
      column(4,
             sliderInput("rate",
                         "Return Rate (in %)",
-                        min = 1, max = 30, value = 20, step = 1),
+                        min = 0, max = 20, value = 5, step = 0.1),
             
             sliderInput("growth",
                         "Growth Rate (in %)",
-                        min = 1, max = 30, value = 20, step = 1)
+                        min = 0, max = 20, value = 2, step = 0.1)
      ),
      column(4,
             sliderInput("years",
                         "Years",
-                        min = 1, max = 30, value = 20, step = 1),
+                        min = 0, max = 50, value = 20, step = 1),
             
             selectInput("facet",
                         "Facet?",
@@ -51,11 +51,11 @@ ui <- fluidPage(
 
 server <- function(input, output) {
    modalities <- reactive({
-      init <- 1000  # initial investment amount
-      contrib <- 200  # annual contribution amount
-      rate <- 0.05  # annual return rate
-      growth <- 0.03
-      years <- 0:10
+      init <- input$init  # initial investment amount
+      contrib <- input$contrib  # annual contribution amount
+      rate <- input$rate / 100  # annual return rate
+      growth <- input$growth / 100
+      years <- 0:(input$years)
       num_years <- length(years)
       
       no_contrib <- rep(0, num_years)  # future values with no annuity
