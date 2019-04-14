@@ -77,29 +77,20 @@ server <- function(input, output) {
     })
   
     output$balancePlot <- renderPlot({
-      modalities <- modalities()
+      data <- reshape2::melt(modalities(), id.vars = "year")
+      colnames(data) <- c('year', 'modality', 'value')
       
-      xrange <- c(0, 10)
-      yrange <- c(0, 4500) 
+      g <- ggplot(data = data, aes(x = year, y = value, col = modality)) +
+        geom_line() +
+        geom_point() +
+        labs(x = "Year", y = "Value", title = "Growth of Investment")
       
-      # set up plot 
-      plot(xrange, yrange, type="n", xlab="year", ylab="value")
-      axis(side = 1, at = seq(from = 0, to = 10, by = 1))
+      if (input$facet == "Yes") {
+        g <- g + facet_grid(. ~ modality) + 
+          geom_area(aes(fill = modality, alpha = 0.5), show.legend = FALSE)
+      }
       
-      # add lines 
-      lines(modalities$year, modalities$no_contrib, 
-            las = 1, type = "l", lwd = 2, col="#CA0713")
-      lines(modalities$year, modalities$fixed_contrib, 
-            las = 1, type = "l", lwd = 2, col="#C78920")
-      lines(modalities$year, modalities$growing_contrib, 
-            las = 1, type = "l", lwd = 2, col="#51991D")
-      
-      title("Growth of Investment Modes Over 10-Year Period")
-      
-      legend(xrange[1], yrange[2],
-             legend=names(modalities)[-1],
-             col=c("#CA0713", "#C78920", "#51991D"),
-             lty=1, cex=0.8)
+      return(g)
     })
     
     output$dataTable <- renderPrint({ modalities() })
