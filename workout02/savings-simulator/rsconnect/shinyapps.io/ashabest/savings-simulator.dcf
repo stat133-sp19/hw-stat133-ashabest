@@ -1,0 +1,12 @@
+name: savings-simulator
+title: savings-simulator
+username:
+account: ashabest
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 866823
+bundleId: 2013755
+url: https://ashabest.shinyapps.io/savings-simulator/
+when: 1555363342.29108
+asMultiple: FALSE
+asStatic: FALSE
