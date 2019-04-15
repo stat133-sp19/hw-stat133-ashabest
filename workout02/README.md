@@ -9,3 +9,5 @@ Added here are the files for a [shiny web app](http://shiny.rstudio.com/) that s
 * with a growing annuity (`growing_contrib`)
 
 Users can set the initial investment value and annual return rate, as well as annual contribution and growth rate for annuities, and the duration in years.
+
+The deployed app can be found here: https://ashabest.shinyapps.io/savings-simulator/
