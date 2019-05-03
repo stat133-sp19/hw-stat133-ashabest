@@ -112,6 +112,7 @@ print.binvar <- function(x, ...) {
   for (s in strings) {
     print(noquote(s))
   }
+  invisible(x)
 }
 
 #' @export
@@ -144,6 +145,7 @@ print.summary.binvar <- function(x, ...) {
   for (s in strings) {
     print(noquote(s))
   }
+  invisible(x)
 }
 
 #' @title Mean
