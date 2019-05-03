@@ -1,0 +1,16 @@
+Package: binomial
+Type: Package
+Title: Binomial
+Version: 0.1.0
+Author: Aryana Shabestari
+Maintainer: Aryana Shabestari <ashabest@berkeley.edu>
+Description: Calculation tools for Binomial random variables
+License: none
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
